@@ -1,0 +1,13 @@
+#The service is already implemented in the grafana-statefulset.yaml file!#
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana-service
+  labels:
+    app: grafana
+spec:
+  ports:
+    - port: 80
+      targetPort: 3000
+  selector:
+    app: grafana
